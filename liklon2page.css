@@ -1,0 +1,357 @@
+@keyframes img{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.image {
+    opacity: 0;
+    background-image: url(yellow1.png);
+    background-size: 1400px;
+    border-radius: 10px;
+    animation: img 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes head {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.heading {
+    opacity: 0;
+    display: inline-block;
+    font-size: 500%;
+    margin-left: 25%;
+    text-shadow: 0px 0px 50px;
+    animation: head 1s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes blackline {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        border-radius: 2px;
+    }
+}
+
+.line {
+    size: cover;
+    opacity: 0;
+    background-color: black;
+    margin-top: 15px;
+    width: 1350px;
+    animation: blackline 2s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+    box-shadow: 0px 0px 10px black;
+}
+
+@keyframes mainanimation {
+    from {
+        opacity: 0;
+        transform: translateY(20%) ;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+
+.toporders {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    color: rgb(251, 1, 1);
+    box-shadow: 0px 0px 30px rgb(255, 0, 0);
+    animation: mainanimation 1s;
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+}
+
+.order1page, .order2page, .order3page, .order4page, .order5page {
+    opacity: 0;
+    display: inline-block;
+    margin-left: 4%;
+    margin-top: 3%;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(246, 212, 167);
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px red;
+    animation: mainanimation 1s;
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+    transition: 1s ease;
+}
+
+
+.order1, .order2, .order3, .order4, .order5 {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-40%);
+    font-size: 200%;
+    font-style: italic;
+    cursor: default;
+}
+
+.order1image, .order2image, .order3image, .order4image, .order5image {
+    block-size: 100px;
+    transform: translateY(-20%);
+    margin-left: 37px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    z-index: 1;
+    position: fixed;
+}
+
+
+
+.order1image, .order3image, .order4image, .order5image {
+    block-size: 120px;
+}
+
+
+
+@keyframes activeimage1 {
+    from {
+        block-size: 120px;
+
+    }
+    to {
+        block-size: 300%;
+        transform: translateX(40%) translateY(-74%);
+        box-shadow: 0px 0px 100px black;
+        
+    }
+}
+
+.order1image.animationl1 {
+    animation: activeimage1 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes notactive1{
+    from {
+        block-size: 300%;
+        transform: translateX(40%) translateY(-74%);
+        box-shadow: 0px 0px 100px black;
+
+    }
+    to {
+        block-size: 120px;
+    }
+}
+
+
+.order1image {
+    animation: notactive1 1s ease;
+}
+
+@keyframes activeimage2 {
+    from {
+        block-size: 100px;
+    }
+    to {
+        block-size: 280%;
+        transform: translate(-15%,-76%);
+        box-shadow: 0px 0px 100px black;
+    }
+}
+
+.order2image.animationl2 {
+    animation: activeimage2 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes notactive2 {
+    from {
+        block-size: 280%;
+        transform: translate(-15%,-76%);
+        box-shadow: 0px 0px 100px black;
+    }
+    to {
+        block-size: 100px;
+    }
+}
+
+
+.order2image {
+    animation: notactive2 1s ease;
+}
+
+
+
+
+@keyframes activeimage3 {
+    from {
+        block-size: 120px;
+    }
+
+    to {
+        block-size: 300%;
+        transform: translate(-40%,-74%);
+        box-shadow: 0px 0px 100px black;
+    }
+}
+
+.order3image.animationl3{
+    animation: activeimage3 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes notactive3 {
+    from {
+        box-shadow: 0px 0px 100px black;
+        block-size: 300%;
+        transform: translate(-40%,-74%);
+    }
+    to {
+        block-size: 120px;
+    }
+}
+
+.order3image {
+    animation: notactive3 1s ease;
+}
+
+@keyframes activeimage4 {
+    from {
+        block-size: 120px;
+    }
+    to {
+        box-shadow: 0px 0px 100px black;
+        block-size: 300%;
+        transform: translate(-80%,-74%);
+    }
+}
+
+.order4image.animationl4 {
+    animation: activeimage4 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes notactive4 {
+    from {
+        box-shadow: 0px 0px 100px black;
+        block-size: 300%;
+        transform: translate(-80%,-74%);
+    }
+    to {
+        block-size: 120px;
+    }
+}
+
+.order4image {
+    animation: notactive4 1s ease;
+}
+
+@keyframes activeimage5 {
+    from {
+        block-size: 120px;
+    }
+    to {
+        box-shadow: 0px 0px 100px black;
+        block-size: 300%;
+        transform: translate(-130%, -77%);
+    }
+}
+
+.order5image.animationl5 {
+    animation: activeimage5 1s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes notactive5 {
+    from {
+        box-shadow: 0px 0px 100px black;
+        block-size: 300%;
+        transform: translate(-130%, -77%);
+    }
+    to {
+        block-size: 120px;
+    }
+}
+
+.order5image {
+    animation: notactive5 1s ease;
+}
+
+.order1image, .order2image, .order3image, .order4image, .order5image:hover {
+    cursor: pointer;
+}
+
+
+@keyframes animatedbuttons {
+    from {
+        opacity: 0;
+        transform: translateY(30%) ;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-20%);
+    }
+}
+
+.forbuttons {
+    opacity: 0;
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 47%;
+    animation: animatedbuttons 1s;
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+    transition: 1s ease;
+}
+
+.button1, .button2 {
+    box-shadow: 2px 2px 3px black;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+
+.forcolorred2 {
+    background-color: red;
+}
+
+input {
+    position: fixed;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-left: 45%;
+    margin-top: 5px;
+    background: url(free-icon-search-3495620.png);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    width: 25px;
+    box-shadow: 0px 0px 30px black;
+    animation: head 1s;
+    animation-fill-mode: forwards;
+    transition: all 1s;
+}
+
+input:hover {
+    transform: translateX(-75px);
+    width: 200px;
+    background: none;
+}
